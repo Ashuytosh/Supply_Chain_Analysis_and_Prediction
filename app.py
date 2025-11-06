@@ -155,7 +155,14 @@ if page == "📈 Dashboard":
     # Color palette
     colors = ['#22d3ee', '#facc15', '#f97316', '#ef4444', '#a855f7', '#ec4899', '#10b981']
     
-    
+    st.markdown(
+    """
+    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
+        Required KPIs
+    </h3>
+    """,
+    unsafe_allow_html=True
+)
     # Row 1: KPIs (Four Columns)
     
     row1 = st.columns(4)
@@ -229,6 +236,16 @@ if page == "📈 Dashboard":
                      labels={'Manufacturing costs': 'Costs ($)'}, color='Supplier name', color_discrete_sequence=colors)
         fig.update_layout(**plot_style, xaxis={'categoryorder': 'total descending'}, yaxis_tickprefix='$')
         st.plotly_chart(fig, use_container_width=True)
+        
+        
+    st.markdown(
+    """
+    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
+        Exploratory data analysis
+    </h3>
+    """,
+    unsafe_allow_html=True
+)
 
     # Row 3: Operational Insights
     row3 = st.columns(3)
@@ -267,14 +284,7 @@ if page == "📈 Dashboard":
         fig.update_layout(**plot_style, yaxis_tickprefix='$', bargap=0.2)
         st.plotly_chart(fig, use_container_width=True)
         
-    st.markdown(
-    """
-    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
-        Exploratory data analysis
-    </h3>
-    """,
-    unsafe_allow_html=True
-)
+
 
     # Row 4: Quality and Efficiency Insights
     row4 = st.columns(3)
