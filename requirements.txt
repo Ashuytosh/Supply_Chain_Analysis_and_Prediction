@@ -1,0 +1,11 @@
+streamlit
+pandas
+nbformat
+plotly
+duckdb
+statsmodels
+numpy
+plotly
+scikit-learn
+xgboost
+joblib
