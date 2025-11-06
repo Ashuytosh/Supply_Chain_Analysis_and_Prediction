@@ -157,7 +157,7 @@ if page == "📈 Dashboard":
     
     st.markdown(
     """
-    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
+    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 2.3em; margin-top: 50px; margin-bottom: 5px;'>
         Required KPIs
     </h3>
     """,
@@ -205,6 +205,16 @@ if page == "📈 Dashboard":
         ))
         fig.update_layout(**plot_style)
         st.plotly_chart(fig, use_container_width=True)
+        
+            
+    st.markdown(
+    """
+    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
+        Exploratory data analysis
+    </h3>
+    """,
+    unsafe_allow_html=True
+)
 
     # Row 2: Revenue and Cost Insights
     row2 = st.columns(3)
@@ -237,15 +247,7 @@ if page == "📈 Dashboard":
         fig.update_layout(**plot_style, xaxis={'categoryorder': 'total descending'}, yaxis_tickprefix='$')
         st.plotly_chart(fig, use_container_width=True)
         
-        
-    st.markdown(
-    """
-    <h3 style='text-align: left center; color: #60a5fa; font-weight: 700;font-size: 1.8em; margin-top: 50px; margin-bottom: 5px;'>
-        Exploratory data analysis
-    </h3>
-    """,
-    unsafe_allow_html=True
-)
+
 
     # Row 3: Operational Insights
     row3 = st.columns(3)
